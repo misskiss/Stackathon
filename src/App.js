@@ -1,4 +1,6 @@
 // const philter = require('philter')
+// import philter from 'philter';
+// new philter();
 
 const canvas = document.getElementById('canvas')
 const ctx = canvas.getContext('2d');
@@ -11,8 +13,8 @@ const uploadFile = document.getElementById('upload-file');
 const revertBtn = document.getElementById('revert-btn');
 
 
-      // philter(['index.html', 'post.html'], { tag: true, customFilterDir: '', customFilters: [] } (css, svg) => {
-      //   console.log('CSS: ', css)
+      // philter(['index.html', 'post.html'], { tag: true, customFilterDir: '', customFilters: [] }, (css, svg) => {
+      //   console.log('CSS: ', css),
       //   console.log('SVG: ', svg)
       // })
 
@@ -87,13 +89,15 @@ document.addEventListener('click', (event) => {
       Caman('#canvas', img, function() {
         this.herMajesty().render();
       })
-    }
-    // } else if(event.target.classList.contains('duotone-add')) {
-    //   <img data-philter-contrast="120" data-philter-duotone="#009efd #2af598"src={img}></img>
+    } 
+    // else if(event.target.classList.contains('data-philter-duotone')) {
+    //   let duotone = new Philter();
+    //   {<img data-philter-duotone="#7028e4 #e5b2ca" src="https://source.unsplash.com/9417pueOkiE/763x480" class="img-fluid" alt="hover"/>}
     //   Caman('#canvas', img, function() {
-    //     this.herMajesty().render();
+    //     this.philter().render();
     //   })
     // }
+    
   }
 });
 
